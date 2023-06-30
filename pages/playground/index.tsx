@@ -123,12 +123,18 @@ export default function PlaygroundPage() {
                 </TabsContent>
                 <TabsContent value="insert" className="mt-0 border-0 p-0">
                   <div className="flex flex-col space-y-4">
-                    <div className="grid h-full grid-rows-2 gap-6 lg:grid-cols-2 lg:grid-rows-1">
-                      <Textarea
-                        placeholder="We're writing to [inset]. Congrats from OpenAI!"
-                        className="h-full min-h-[300px] lg:min-h-[700px] xl:min-h-[700px]"
-                      />
-                      <div className="rounded-md border bg-muted"></div>
+                    <div className="grid h-full gap-6 lg:grid-cols-2">
+                      <div className="flex flex-1 flex-col space-y-2">
+                        <Label htmlFor="input">Input</Label>
+                        <Textarea
+                          placeholder="We're writing to [inset]. Congrats from OpenAI!"
+                          className="flex-1 lg:min-h-[580px]"
+                        />
+                      </div>
+                      <div className="flex flex-1 flex-col space-y-2">
+                        <Label htmlFor="input">Output</Label>
+                        <div className="rounded-md border bg-muted flex-1 lg:min-h-[580px]"></div>
+                      </div>
                     </div>
                     <div className="flex items-center space-x-2">
                       <Button>Submit</Button>
