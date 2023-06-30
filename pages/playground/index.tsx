@@ -128,12 +128,12 @@ export default function PlaygroundPage() {
                         <Label htmlFor="input">Input</Label>
                         <Textarea
                           placeholder="We're writing to [inset]. Congrats from OpenAI!"
-                          className="flex-1 lg:min-h-[580px]"
+                          className="flex-1 lg:min-h-[677px]"
                         />
                       </div>
                       <div className="flex flex-1 flex-col space-y-2">
                         <Label htmlFor="input">Output</Label>
-                        <div className="rounded-md border bg-muted flex-1 lg:min-h-[580px]"></div>
+                        <div className="rounded-md border bg-muted flex-1 lg:min-h-[677px]"></div>
                       </div>
                     </div>
                     <div className="flex items-center space-x-2">
