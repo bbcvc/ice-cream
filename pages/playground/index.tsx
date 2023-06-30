@@ -29,7 +29,6 @@ import { TemperatureSelector } from "@/components/playground/temperature-selecto
 import { TopPSelector } from "@/components/playground/top-p-selector"
 import { models, types } from "./data/models"
 import { presets } from "./data/presets"
-import Image from "next/image"
 import Editor from "@/components/editor"
 
 export const metadata: Metadata = {
@@ -40,22 +39,6 @@ export const metadata: Metadata = {
 export default function PlaygroundPage() {
   return (
     <>
-      <div className="md:hidden">
-        <Image
-          src="/examples/playground-light.png"
-          width={1280}
-          height={916}
-          alt="Playground"
-          className="block dark:hidden"
-        />
-        <Image
-          src="/examples/playground-dark.png"
-          width={1280}
-          height={916}
-          alt="Playground"
-          className="hidden dark:block"
-        />
-      </div>
       <div className="hidden h-full flex-col md:flex">
         <div className="container flex flex-col items-start justify-between space-y-2 py-4 sm:flex-row sm:items-center sm:space-y-0 md:h-16">
           <h2 className="text-lg font-semibold">Playground</h2>
