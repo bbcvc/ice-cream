@@ -111,10 +111,6 @@ export default function PlaygroundPage() {
               <div className="md:order-1">
                 <TabsContent value="complete" className="mt-0 border-0 p-0">
                   <div className="flex h-full flex-col space-y-4">
-                    {/* <Textarea
-                      placeholder="Write a tagline for an ice cream shop"
-                      className="min-h-[400px] flex-1 p-4 md:min-h-[700px] lg:min-h-[700px]"
-                    /> */}
                     <Editor />
                     <div className="flex items-center space-x-2">
                       <Button>Submit</Button>
