@@ -13,7 +13,7 @@ export default function Header() {
             href="/"
           >
             <h1 className="text-4xl Avenir tracking-tighter text-gray-900 md:text-4x1 lg:text-3xl">
-              ai--
+              ice-cream
             </h1>
           </Link>
           <button
