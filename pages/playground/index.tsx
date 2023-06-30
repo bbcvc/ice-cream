@@ -127,12 +127,13 @@ export default function PlaygroundPage() {
                       <div className="flex flex-1 flex-col space-y-2">
                         <Label htmlFor="input">Input</Label>
                         <Textarea
+                          id="input"
                           placeholder="We're writing to [inset]. Congrats from OpenAI!"
                           className="flex-1 lg:min-h-[677px]"
                         />
                       </div>
                       <div className="flex flex-1 flex-col space-y-2">
-                        <Label htmlFor="input">Output</Label>
+                        <Label>Output</Label>
                         <div className="rounded-md border bg-muted flex-1 lg:min-h-[677px]"></div>
                       </div>
                     </div>
@@ -150,12 +151,10 @@ export default function PlaygroundPage() {
                     <div className="h-full gap-6">
                       <div className="flex flex-col space-y-4">
                         <div className="flex flex-1 flex-col space-y-2">
-                          <Label htmlFor="input">Input</Label>
-                          <Textarea
-                            id="input"
+                          <div
                             placeholder="We is going to the market."
-                            className="flex-1 lg:min-h-[580px]"
-                          />
+                            className="rounded-md border flex-1 lg:min-h-[600px] p-6 text-slate-400"
+                          >Chat View</div>
                         </div>
                         <div className="flex flex-col space-y-2">
                           <Label htmlFor="instructions">Instructions</Label>
