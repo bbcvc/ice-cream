@@ -147,7 +147,7 @@ export default function PlaygroundPage() {
                 </TabsContent>
                 <TabsContent value="edit" className="mt-0 border-0 p-0">
                   <div className="flex flex-col space-y-4">
-                    <div className="grid h-full gap-6 lg:grid-cols-2">
+                    <div className="h-full gap-6">
                       <div className="flex flex-col space-y-4">
                         <div className="flex flex-1 flex-col space-y-2">
                           <Label htmlFor="input">Input</Label>
@@ -165,7 +165,6 @@ export default function PlaygroundPage() {
                           />
                         </div>
                       </div>
-                      <div className="mt-[21px] min-h-[400px] rounded-md border bg-muted lg:min-h-[700px]" />
                     </div>
                     <div className="flex items-center space-x-2">
                       <Button>Submit</Button>
