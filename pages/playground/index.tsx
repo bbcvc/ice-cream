@@ -30,7 +30,7 @@ import { TopPSelector } from "@/components/playground/top-p-selector"
 import { models, types } from "../../lib/data/models"
 import { presets } from "../../lib/data/presets"
 import Editor from "@/components/editor"
-import Chat from "@/components/chat"
+import { Chat } from "@/components/chat"
 
 export const metadata: Metadata = {
   title: "Playground",
