@@ -31,6 +31,7 @@ import { models, types } from "../../lib/data/models"
 import { presets } from "../../lib/data/presets"
 import Editor from "@/components/editor"
 import { Chat } from "@/components/chat"
+import Translate from "@/components/translate"
 
 export const metadata: Metadata = {
   title: "Playground",
@@ -106,7 +107,8 @@ export default function PlaygroundPage() {
                   </div>
                 </TabsContent>
                 <TabsContent value="insert" className="mt-0 border-0 p-0">
-                  <div className="flex flex-col space-y-4">
+                  <Translate />
+                  {/* <div className="flex flex-col space-y-4">
                     <div className="grid h-full gap-6 lg:grid-cols-2">
                       <div className="flex flex-1 flex-col space-y-2">
                         <Label htmlFor="input">Input</Label>
@@ -128,7 +130,7 @@ export default function PlaygroundPage() {
                         <History className="h-4 w-4" />
                       </Button>
                     </div>
-                  </div>
+                  </div> */}
                 </TabsContent>
                 <TabsContent value="edit" className="mt-0 border-0 p-0">
                   <Chat />
