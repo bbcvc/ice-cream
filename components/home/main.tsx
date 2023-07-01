@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image'
 
 export default function Main() {
   return (
@@ -21,7 +22,7 @@ export default function Main() {
           </div>
         </div>
         <div className="xl:mr-44 sm:mr-0 sm:mb-28 mb-0 lg:mb-0 mr-48 md:pl-10">
-          <img
+          <Image
             className="w-80 md:ml-1 ml-24"
             alt="iPhone-12"
             src="/images/iPhone-12-Mockup.png"
@@ -37,28 +38,28 @@ export default function Main() {
           </div>
           <div className="grid grid-cols-2 gap-16 mb-16 text-center lg:grid-cols-4">
             <div className="flex items-center justify-center">
-              <img
+              <Image
                 src="/images/Google-Logo.webp"
                 alt="Google Logo"
                 className="block object-contain h-16 greyC"
               ></img>
             </div>
             <div className="flex items-center justify-center">
-              <img
+              <Image
                 src="/images/Shopify-Logo.svg"
                 alt="Shopify Logo"
                 className="block object-contain h-16 greyC"
               ></img>
             </div>
             <div className="flex items-center justify-center">
-              <img
+              <Image
                 src="/images/Cloudflare-Logo.svg"
                 alt="Cloudflare Logo"
                 className="block object-contain h-16 greyC"
               ></img>
             </div>
             <div className="flex items-center justify-center">
-              <img
+              <Image
                 src="/images/PayPal-Logo.png"
                 alt="Paypal Logo"
                 className="block object-contain h-16 greyC"
@@ -75,7 +76,7 @@ export default function Main() {
           Minify your CSS .
         </h1>
         <div className="container flex flex-col items-center justify-center mx-auto rounded-lg ">
-          <img
+          <Image
             className="object-cover object-center w-3/4 mb-10 g327 border rounded-lg shadow-md"
             alt="Placeholder Image"
             src="./images/placeholder.png"
