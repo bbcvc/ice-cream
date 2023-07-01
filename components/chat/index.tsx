@@ -12,10 +12,6 @@ export default function Chat() {
         id: "-1",
         role: 'assistant',
         content: 'Hello, I am AI.',
-      }, {
-        id: '0',
-        role: 'user',
-        content: 'What is your name?',
       }
     ]
   })
