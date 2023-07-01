@@ -30,6 +30,7 @@ import { TopPSelector } from "@/components/playground/top-p-selector"
 import { models, types } from "../../lib/data/models"
 import { presets } from "../../lib/data/presets"
 import Editor from "@/components/editor"
+import Chat from "@/components/chat"
 
 export const metadata: Metadata = {
   title: "Playground",
@@ -130,32 +131,7 @@ export default function PlaygroundPage() {
                   </div>
                 </TabsContent>
                 <TabsContent value="edit" className="mt-0 border-0 p-0">
-                  <div className="flex flex-col space-y-4">
-                    <div className="h-full gap-6">
-                      <div className="flex flex-col space-y-4">
-                        <div className="flex flex-1 flex-col space-y-2">
-                          <div
-                            placeholder="We is going to the market."
-                            className="rounded-md border flex-1 lg:min-h-[600px] p-6 text-slate-400"
-                          >Chat View</div>
-                        </div>
-                        <div className="flex flex-col space-y-2">
-                          <Label htmlFor="instructions">Instructions</Label>
-                          <Textarea
-                            id="instructions"
-                            placeholder="Fix the grammar."
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <Button>Submit</Button>
-                      <Button variant="secondary">
-                        <span className="sr-only">Show history</span>
-                        <History className="h-4 w-4" />
-                      </Button>
-                    </div>
-                  </div>
+                  <Chat />
                 </TabsContent>
               </div>
             </div>
