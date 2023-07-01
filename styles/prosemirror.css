@@ -43,3 +43,8 @@
   }
 }
 
+.ProseMirror h1,
+.ProseMirror h2,
+.ProseMirror h3 {
+  font-weight: 700;
+}
