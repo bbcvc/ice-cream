@@ -26,7 +26,7 @@ export default function Main() {
             className="w-80 md:ml-1 ml-24"
             alt="iPhone-12"
             src="/images/iPhone-12-Mockup.png"
-          ></img>
+          />
         </div>
       </div>
       <section className="mx-auto">
@@ -42,28 +42,28 @@ export default function Main() {
                 src="/images/Google-Logo.webp"
                 alt="Google Logo"
                 className="block object-contain h-16 greyC"
-              ></img>
+              />
             </div>
             <div className="flex items-center justify-center">
               <Image
                 src="/images/Shopify-Logo.svg"
                 alt="Shopify Logo"
                 className="block object-contain h-16 greyC"
-              ></img>
+              />
             </div>
             <div className="flex items-center justify-center">
               <Image
                 src="/images/Cloudflare-Logo.svg"
                 alt="Cloudflare Logo"
                 className="block object-contain h-16 greyC"
-              ></img>
+              />
             </div>
             <div className="flex items-center justify-center">
               <Image
                 src="/images/PayPal-Logo.png"
                 alt="Paypal Logo"
                 className="block object-contain h-16 greyC"
-              ></img>
+              />
             </div>
           </div>
         </div>
@@ -80,7 +80,7 @@ export default function Main() {
             className="object-cover object-center w-3/4 mb-10 g327 border rounded-lg shadow-md"
             alt="Placeholder Image"
             src="./images/placeholder.png"
-          ></img>
+          />
         </div>
       </div>
       <section className="relative">
