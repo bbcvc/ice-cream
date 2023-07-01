@@ -59,7 +59,7 @@ export default function Editor() {
   });
 
   const { complete, completion, isLoading, stop } = useCompletion({
-    id: "novel",
+    id: "ice-cream",
     api: "/api/generate",
     onResponse: (response) => {
       if (response.status === 429) {

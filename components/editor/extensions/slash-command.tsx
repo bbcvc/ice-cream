@@ -256,7 +256,7 @@ const CommandList = ({
   const { toast } = useToast()
 
   const { complete, isLoading } = useCompletion({
-    id: "novel",
+    id: "ice-cream",
     api: "/api/generate",
     onResponse: (response) => {
       if (response.status === 429) {

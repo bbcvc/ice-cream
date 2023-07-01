@@ -30,7 +30,6 @@ import { TopPSelector } from "@/components/playground/top-p-selector"
 import { models, types } from "../../lib/data/models"
 import { presets } from "../../lib/data/presets"
 import Editor from "@/components/editor"
-import { useEffect } from "react"
 
 export const metadata: Metadata = {
   title: "Playground",
@@ -38,16 +37,6 @@ export const metadata: Metadata = {
 }
 
 export default function PlaygroundPage() {
-  useEffect(() => {
-    fetch('/api/generate', {
-      method: 'POST',
-      body: JSON.stringify({
-        prompt: 'my name is eric.'
-      })
-    })
-  }, [])
-
-
   return (
     <>
       <div className="hidden h-full flex-col md:flex">
