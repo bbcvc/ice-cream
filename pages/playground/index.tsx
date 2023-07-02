@@ -32,6 +32,7 @@ import { presets } from "../../lib/data/presets"
 import Editor from "@/components/editor"
 import { Chat } from "@/components/chat"
 import Translate from "@/components/translate"
+import { usePresetStore } from "@/store/preset.store"
 
 export const metadata: Metadata = {
   title: "Playground",
@@ -39,13 +40,15 @@ export const metadata: Metadata = {
 }
 
 export default function PlaygroundPage() {
+  const { presetList } = usePresetStore()
+
   return (
     <>
       <div className="hidden h-full flex-col md:flex">
         <div className="container flex flex-col items-start justify-between space-y-2 py-4 sm:flex-row sm:items-center sm:space-y-0 md:h-16">
           <h2 className="text-lg font-semibold">Playground</h2>
           <div className="ml-auto flex w-full space-x-2 sm:justify-end">
-            <PresetSelector presets={presets} />
+            <PresetSelector presets={presetList} />
             <PresetSave />
             <div className="hidden space-x-2 md:flex">
               {/* <CodeViewer /> */}
@@ -97,7 +100,7 @@ export default function PlaygroundPage() {
                 <TabsContent value="complete" className="mt-0 border-0 p-0">
                   <div className="flex h-full flex-col space-y-4">
                     <Editor />
-                    <div className="flex items-center space-x-2">
+                    <div className="hidden items-center space-x-2">
                       <Button>Submit</Button>
                       <Button variant="secondary">
                         <span className="sr-only">Show history</span>

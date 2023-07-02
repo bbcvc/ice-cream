@@ -70,11 +70,11 @@ export function PresetSelector({ presets, ...props }: PresetSelectorProps) {
               </CommandItem>
             ))}
           </CommandGroup>
-          <CommandGroup className="pt-0">
+          {/* <CommandGroup className="pt-0">
             <CommandItem onSelect={() => router.push("/examples")}>
               More examples
             </CommandItem>
-          </CommandGroup>
+          </CommandGroup> */}
         </Command>
       </PopoverContent>
     </Popover>
