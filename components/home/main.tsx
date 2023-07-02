@@ -10,7 +10,7 @@ export default function Main() {
             Build your ai application in 15 minutes
           </h1>
           <p className="mb-4 xl:w-3/4 text-gray-600 text-lg">
-            Description
+            Gone are the days of complex and time-consuming customization processes. With only three simple steps, you can transform your application into an extension of your vision. Our streamlined approach ensures that anyone, regardless of technical expertise, can easily navigate through the customization process.
           </p>
           <div className="flex justify-center">
             <Link
@@ -23,9 +23,11 @@ export default function Main() {
         </div>
         <div className="xl:mr-44 sm:mr-0 sm:mb-28 mb-0 lg:mb-0 mr-48 md:pl-10">
           <Image
-            className="w-80 md:ml-1 ml-24"
-            alt="iPhone-12"
-            src="/images/iPhone-12-Mockup.png"
+            width={320}
+            height={100}
+            className="md:ml-1 ml-24"
+            alt="ice-cream"
+            src="/images/ice-cream.jpg"
           />
         </div>
       </div>
@@ -33,36 +35,44 @@ export default function Main() {
         <div className="container px-5 mx-auto lg:px-24 ">
           <div className="flex flex-col w-full mb-4 text-left lg:text-center">
             <h1 className="mb-8 text-2xl Avenir font-semibold text-black">
-              Trusted by top-tier product companies
+              We build on the following reliable products
             </h1>
           </div>
           <div className="grid grid-cols-2 gap-16 mb-16 text-center lg:grid-cols-4">
             <div className="flex items-center justify-center">
               <Image
-                src="/images/Google-Logo.webp"
-                alt="Google Logo"
-                className="block object-contain h-16 greyC"
+                width={128}
+                height={128}
+                src="/images/openai.jpg"
+                alt="openai logo"
+                className="block object-contain greyC hover:shadow-md"
               />
             </div>
             <div className="flex items-center justify-center">
               <Image
-                src="/images/Shopify-Logo.svg"
-                alt="Shopify Logo"
-                className="block object-contain h-16 greyC"
+                width={128}
+                height={128}
+                src="/images/supabase.jpg"
+                alt="supabase logo"
+                className="block object-contain greyC hover:shadow-md"
               />
             </div>
             <div className="flex items-center justify-center">
               <Image
-                src="/images/Cloudflare-Logo.svg"
-                alt="Cloudflare Logo"
-                className="block object-contain h-16 greyC"
+                width={128}
+                height={128}
+                src="/images/vercel.jpg"
+                alt="vercel Logo"
+                className="block object-contain greyC hover:shadow-md"
               />
             </div>
             <div className="flex items-center justify-center">
               <Image
-                src="/images/PayPal-Logo.png"
-                alt="Paypal Logo"
-                className="block object-contain h-16 greyC"
+                width={128}
+                height={128}
+                src="/images/upstash.png"
+                alt="upstash Logo"
+                className="block object-contain greyC hover:shadow-md"
               />
             </div>
           </div>
@@ -77,9 +87,11 @@ export default function Main() {
         </h1>
         <div className="container flex flex-col items-center justify-center mx-auto rounded-lg ">
           <Image
+            width={1200}
+            height={800}
             className="object-cover object-center w-3/4 mb-10 g327 border rounded-lg shadow-md"
-            alt="Placeholder Image"
-            src="./images/placeholder.png"
+            alt="preview Image"
+            src="/images/preview.png"
           />
         </div>
       </div>
