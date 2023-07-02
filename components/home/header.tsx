@@ -1,8 +1,12 @@
 import React from "react";
 import Link from "next/link";
+import { useSignInModal } from "../signin";
+
 
 export default function Header() {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
+  const { SignInModal, setShowSignInModal: showSingIn } = useSignInModal()
+
 
   return (
     <div className="fixed top-0 w-full z-30 clearNav md:bg-opacity-90 transition duration-300 ease-in-out">
@@ -68,6 +72,9 @@ export default function Header() {
                 <Link
                   className="inline-flex items-center px-4 py-2 mt-2 font-medium text-white transition duration-500 ease-in-out transform rounded-lg text-md md:mt-0 md:ml-4 bg-gray-900"
                   href="/"
+                  onClick={() => {
+                    showSingIn(true)
+                  }}
                 >
                   <span className="justify-center">Login</span>
                   <svg
@@ -86,6 +93,7 @@ export default function Header() {
           </nav>
         </div>
       </div>
+      <SignInModal />
     </div>
   );
 }
