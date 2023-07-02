@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>ai</title>
+        <title>ice-cream | Build your ai application quickly</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
