@@ -15,7 +15,6 @@ import {
   TabsList,
   TabsTrigger,
 } from "@/components/ui/tabs"
-import { Textarea } from "@/components/ui/textarea"
 
 import { CodeViewer } from "@/components/playground/code-viewer"
 import { Icons } from "@/components/playground/icons"
@@ -33,6 +32,8 @@ import Editor from "@/components/editor"
 import { Chat } from "@/components/chat"
 import Translate from "@/components/translate"
 import { usePresetStore } from "@/store/preset.store"
+import { ApiKeyInput } from "@/components/playground/api-key-input"
+import { PromptTextarea } from "@/components/playground/prompt-textarea"
 
 export const metadata: Metadata = {
   title: "Playground",
@@ -60,8 +61,9 @@ export default function PlaygroundPage() {
         <Separator />
         <Tabs defaultValue="complete" className="flex-1">
           <div className="container h-full py-6">
-            <div className="grid h-full items-stretch gap-6 md:grid-cols-[1fr_200px]">
+            <div className="grid h-full items-stretch gap-6 md:grid-cols-[1fr_260px]">
               <div className="hidden flex-col space-y-4 sm:flex md:order-2">
+                <ApiKeyInput />
                 <div className="grid gap-2">
                   <HoverCard openDelay={200}>
                     <HoverCardTrigger asChild>
@@ -91,6 +93,7 @@ export default function PlaygroundPage() {
                     </TabsTrigger>
                   </TabsList>
                 </div>
+                <PromptTextarea />
                 <ModelSelector types={types} models={models} />
                 <TemperatureSelector defaultValue={[0.56]} />
                 <MaxLengthSelector defaultValue={[256]} />
