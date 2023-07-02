@@ -48,7 +48,7 @@ export default function PlaygroundPage() {
             <PresetSelector presets={presets} />
             <PresetSave />
             <div className="hidden space-x-2 md:flex">
-              <CodeViewer />
+              {/* <CodeViewer /> */}
               <PresetShare />
             </div>
             <PresetActions />

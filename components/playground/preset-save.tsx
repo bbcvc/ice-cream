@@ -15,11 +15,11 @@ export function PresetSave() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="secondary">Save</Button>
+        <Button variant="secondary">Add preset</Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[475px]">
         <DialogHeader>
-          <DialogTitle>Save preset</DialogTitle>
+          <DialogTitle>Add preset</DialogTitle>
           <DialogDescription>
             This will save the current playground state as a preset which you
             can access later or share with others.
