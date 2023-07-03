@@ -83,7 +83,6 @@ export function useSignInModal() {
   const [showSignInModal, setShowSignInModal] = useState(false)
 
   const SignInModalCallback = useCallback(() => {
-    console.log('SignInModalCallback')
     return <SignInModal showSignInModal={showSignInModal} setShowSignInModal={setShowSignInModal} />
   }, [showSignInModal, setShowSignInModal])
 

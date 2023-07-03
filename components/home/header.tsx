@@ -1,15 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
 import { useSignInModal } from "../signin";
+import { useUser } from '@supabase/auth-helpers-react'
+import { UserNav } from "./user";
 
 
 export default function Header() {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
   const { SignInModal, setShowSignInModal: showSingIn } = useSignInModal()
-
+  const user = useUser()
 
   return (
-    <div className="fixed top-0 w-full z-30 clearNav md:bg-opacity-90 transition duration-300 ease-in-out">
+    <div className="backdrop-saturate-50 backdrop-blur-sm fixed top-0 w-full z-30 clearNav md:bg-opacity-90 transition duration-300 ease-in-out">
       <div className="flex flex-col max-w-6xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
         <div className="flex flex-row items-center justify-between p-4">
           <Link
@@ -68,27 +70,36 @@ export default function Header() {
                   About Us
                 </Link>
               </li>
-              <li>
-                <Link
-                  className="inline-flex items-center px-4 py-2 mt-2 font-medium text-white transition duration-500 ease-in-out transform rounded-lg text-md md:mt-0 md:ml-4 bg-gray-900"
-                  href="/"
-                  onClick={() => {
-                    showSingIn(true)
-                  }}
-                >
-                  <span className="justify-center">Login</span>
-                  <svg
-                    className="w-3 h-3 fill-current text-gray-400 flex ml-2 -mr-1"
-                    viewBox="0 0 12 12"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M11.707 5.293L7 .586 5.586 2l3 3H0v2h8.586l-3 3L7 11.414l4.707-4.707a1 1 0 000-1.414z"
-                      fillRule="nonzero"
-                    />
-                  </svg>
-                </Link>
-              </li>
+              {
+                !user && (
+                  <li>
+                    <Link
+                      className="inline-flex items-center px-4 py-2 mt-2 font-medium text-white transition duration-500 ease-in-out transform rounded-lg text-md md:mt-0 md:ml-4 bg-gray-900"
+                      href="/"
+                      onClick={() => {
+                        showSingIn(true)
+                      }}
+                    >
+                      <span className="justify-center">Login</span>
+                      <svg
+                        className="w-3 h-3 fill-current text-gray-400 flex ml-2 -mr-1"
+                        viewBox="0 0 12 12"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M11.707 5.293L7 .586 5.586 2l3 3H0v2h8.586l-3 3L7 11.414l4.707-4.707a1 1 0 000-1.414z"
+                          fillRule="nonzero"
+                        />
+                      </svg>
+                    </Link>
+                  </li>
+                )
+              }
+              {user && (
+                <li>
+                  <UserNav />
+                </li>
+              )}
             </ul>
           </nav>
         </div>
