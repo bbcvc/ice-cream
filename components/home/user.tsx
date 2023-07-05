@@ -1,8 +1,9 @@
-import { CreditCard, LogOut, PlusCircle, Settings, User, ChevronDown } from "lucide-react"
+import { CreditCard, LogOut, PlusCircle, Settings, User, ChevronDown, LayoutDashboard } from "lucide-react"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuShortcut, DropdownMenuTrigger } from "../ui/dropdown-menu"
 import { Button } from "../ui/button"
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar"
 import { useSupabaseClient, useUser } from '@supabase/auth-helpers-react'
+import { useRouter } from "next/router"
 
 export function UserNav() {
   const user = useUser()
@@ -19,6 +20,8 @@ export function UserNav() {
     const { error } = await supabaseClient.auth.signOut()
     error && console.error('=======sign out error=====', { error })
   }
+
+  const router = useRouter()
 
   return (
     <DropdownMenu>
@@ -49,9 +52,9 @@ export function UserNav() {
             <span>Profile</span>
             <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
           </DropdownMenuItem>
-          <DropdownMenuItem>
-            <CreditCard className="mr-2 h-4 w-4" />
-            <span>Billing</span>
+          <DropdownMenuItem onClick={() => router.push('/dashboard')}>
+            <LayoutDashboard className="mr-2 h-4 w-4" />
+            <span>Dashboard</span>
             <DropdownMenuShortcut>⌘B</DropdownMenuShortcut>
           </DropdownMenuItem>
           <DropdownMenuItem>

@@ -1,27 +1,29 @@
 import { create } from 'zustand'
 import { persist, createJSONStorage } from 'zustand/middleware'
 
-interface Preset {
-  id: string
-  name: string
-  description: string
+interface Confing {
+  apiKey: string
+  mode: string
+  systemPrompt: string
+  model: string
+  temperature: number
+  maxLength: number
+  topP: number
 }
 
-const presets: Preset[] = []
+const presets: Map<string, Confing> = new Map()
 
 interface State {
-  presetList: Preset[]
+  appConfig: Map<string, Confing>
 }
 
 interface Action {
-  add: (item: Preset) => void
 }
 
-export const usePresetStore = create(
+export const useShareConfigStore = create(
   persist<State & Action>(
     (set, get) => ({
-      presetList: presets,
-      add: (item) => set({ presetList: [...get().presetList, item] }),
+      appConfig: presets,
     }),
     {
       name: 'preset', // unique name

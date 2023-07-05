@@ -27,7 +27,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover"
 
-import { Model, ModelType } from "../../lib/data/models"
+import { Model, ModelType } from "../../types/data/models"
 
 interface ModelSelectorProps extends PopoverProps {
   types: readonly ModelType[]
@@ -38,6 +38,10 @@ export function ModelSelector({ models, types, ...props }: ModelSelectorProps) {
   const [open, setOpen] = React.useState(false)
   const [selectedModel, setSelectedModel] = React.useState<Model>(models[0])
   const [peekedModel, setPeekedModel] = React.useState<Model>(models[0])
+
+  React.useEffect(() => {
+    console.log("peekedModel", peekedModel)
+  }, [peekedModel])
 
   return (
     <div className="grid gap-2">
@@ -73,7 +77,7 @@ export function ModelSelector({ models, types, ...props }: ModelSelectorProps) {
               side="left"
               align="start"
               forceMount
-              className="min-h-[280px]"
+              className="min-h-[100px]"
             >
               <div className="grid gap-2">
                 <h4 className="font-medium leading-none">{peekedModel.name}</h4>

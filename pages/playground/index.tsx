@@ -26,14 +26,15 @@ import { PresetSelector } from "@/components/playground/preset-selector"
 import { PresetShare } from "@/components/playground/preset-share"
 import { TemperatureSelector } from "@/components/playground/temperature-selector"
 import { TopPSelector } from "@/components/playground/top-p-selector"
-import { models, types } from "../../lib/data/models"
-import { presets } from "../../lib/data/presets"
+import { models, types } from "../../types/data/models"
+import { presets } from "../../types/data/presets"
 import Editor from "@/components/editor"
 import { Chat } from "@/components/chat"
 import Translate from "@/components/translate"
 import { usePresetStore } from "@/store/preset.store"
 import { ApiKeyInput } from "@/components/playground/api-key-input"
 import { PromptTextarea } from "@/components/playground/prompt-textarea"
+import { useShareConfigStore } from "@/store/share-app.store"
 
 export const metadata: Metadata = {
   title: "Playground",
@@ -42,6 +43,7 @@ export const metadata: Metadata = {
 
 export default function PlaygroundPage() {
   const { presetList } = usePresetStore()
+  const { appConfig } = useShareConfigStore()
 
   return (
     <>
