@@ -7,6 +7,7 @@ import { useRouter } from "next/router"
 
 export function UserNav() {
   const user = useUser()
+  const router = useRouter()
   const supabaseClient = useSupabaseClient()
 
   if (!user) {
@@ -20,8 +21,6 @@ export function UserNav() {
     const { error } = await supabaseClient.auth.signOut()
     error && console.error('=======sign out error=====', { error })
   }
-
-  const router = useRouter()
 
   return (
     <DropdownMenu>
