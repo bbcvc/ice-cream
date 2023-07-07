@@ -10,6 +10,7 @@ import React from 'react'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { usePresetStore } from "@/store/preset.store"
 import { NewProject } from "@/components/dashboard/new-project"
+import Link from "next/link"
 
 export const metadata: Metadata = {
   title: "Dashboard",
@@ -58,7 +59,7 @@ export default function DashboardPage() {
                   <p>Card Content</p>
                 </CardContent>
                 <CardFooter>
-                  <p>--</p>
+                  <Link href={`/playground/${preset.id}`}>--</Link>
                 </CardFooter>
               </Card>
             ))
